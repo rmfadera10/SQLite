@@ -11,12 +11,12 @@ public class MySQLHelper extends SQLiteOpenHelper {
     private static final String db_name="Dictionary";
     private static final int db_version=1;
 
-    private static final String tblname="tblword";
+    private static final String tbl_name="tblword";
 
 
-    private static final String tblid="tblid";
+    private static final String tbl_id="tblid";
     private static final String wordName="wordName";
-    private static final String wordmeaning="wordmeaning";
+    private static final String word_meaning="wordmeaning";
 
 
     public MySQLHelper(@Nullable Context context) {
@@ -26,8 +26,8 @@ public class MySQLHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String query="CREATE TABLE" +tblname +"("+tblid+"INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                wordName+"TEXGT,"+wordmeaning+"TEXT"+")";
+        String query = "CREATE TABLE " +tbl_name + "(" +tbl_id+ "INTEGER PRIMARY KEY AUTOINCREMENT ," +
+                wordName+ "TEXGT," +word_meaning+ "TEXT" + ")";
 
         db.execSQL(query);
 
